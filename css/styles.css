@@ -83,9 +83,7 @@ img {
   color: var(--title-color);
   margin-bottom: 50px;
 }
-/* button {
-  cursor: pointer;
-} */
+
 .link {
   text-decoration: none;
 }
@@ -131,22 +129,6 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-
-/* .logo {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
-  color: var(--brand-accent);
-}
-
-.logo__black {
-  color: #000000;
-}
-
-.logo-white {
-  color: var(--primary-white-color);
-} */
 
 .nav__list {
   display: flex;
@@ -283,9 +265,6 @@ img {
 }
 
 /* -----------------BENEFITS------------------------------- */
-
-.benefits {
-}
 
 .benefits__list {
   display: flex;
@@ -547,9 +526,6 @@ img {
 .footer__container {
   display: flex;
   align-items: baseline;
-}
-
-.footer__contacts {
 }
 
 /* .logo-footer {
@@ -909,6 +885,7 @@ img {
   line-height: 1.15;
   text-align: center;
   margin-bottom: 12px;
+  color: var(--title-color);
 }
 /* .modal-form {
   margin-left: auto;

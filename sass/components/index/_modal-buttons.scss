@@ -1,0 +1,47 @@
+// --------------BTN-CLOSE------------------
+.modal-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  transition: fill var(--timing-duration) var(--timing-function);
+}
+.modal-btn:hover {
+  fill: var(--brand-accent);
+}
+// --------------BTN-SUBMIT-----------------
+.modal-form__submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+
+  width: 200px;
+  height: 50px;
+  padding: 0;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+
+  letter-spacing: 0.06em;
+  color: var(--primary-white-color);
+  background-color: var(--brand-accent);
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  transition: background-color var(--timing-duration) var(--timing-function);
+}
+
+.modal-form__submit:hover,
+.modal-form__submit:focus {
+  background-color: var(--btn-hover);
+}
