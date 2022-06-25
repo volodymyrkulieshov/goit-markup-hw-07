@@ -4,7 +4,7 @@
   line-height: 1.15;
   text-align: center;
   margin-bottom: 12px;
-  color: var(--title-color);
+  color: $title-color;
 }
 /* .modal-form {
   margin-left: auto;
@@ -25,10 +25,11 @@
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
-  color: var(--basic-color);
+  color: $basic-color;
 }
 .label-icon {
   position: relative;
+  transition: border-color $timing-duration $timing-function;
 }
 .modal-form__imput {
   width: 100%;
@@ -36,38 +37,30 @@
   margin-top: 4px;
   padding-left: 42px;
   font-size: 14px;
-  color: var(--basic-color);
+  color: $basic-color;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  outline: none;
-  transition: border-color var(--timing-duration) var(--timing-function);
+
+  transition: border-color $timing-duration $timing-function;
+
+  .label-icon:focus-within &,
+  .label-icon:hover & {
+    border-color: $brand-accent;
+    outline: none;
+  }
 }
 
 .modal-form__icon {
   position: absolute;
   left: 12px;
-  top: 12px;
-  transition: fill var(--timing-duration) var(--timing-function);
-}
+  top: 16px;
+  fill: $title-color;
+  transition: fill $timing-duration $timing-function;
 
-.modal-form__icon:focus-within,
-.modal-form__icon:hover {
-  fill: var(--brand-accent);
-}
-
-/* .user-icon:focus-within + .modal-imput,
-.user-icon:hover + .modal-imput {
-  border-color: var(--brand-accent);
-} */
-
-.modal-form__imput:focus-within,
-.modal-form__imput:hover {
-  border-color: var(--brand-accent);
-}
-
-.modal-form__imput:focus-within + .modal-form__icon,
-.modal-form__imput:hover + .modal-form__icon {
-  fill: var(--brand-accent);
+  .label-icon:focus-within &,
+  .label-icon:hover & {
+    fill: $brand-accent;
+  }
 }
 
 .comment-text {
@@ -76,7 +69,7 @@
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
-  color: var(--basic-color);
+  color: $basic-color;
 }
 
 .modal-form__comment {
@@ -87,23 +80,24 @@
   padding: 12px 16px;
   margin-top: 4px;
   margin-bottom: 20px;
-  color: var(--basic-color);
+  color: $basic-color;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   resize: none;
   outline: none;
-  transition: border-color var(--timing-duration) var(--timing-function);
-}
+  transition: border-color $timing-duration $timing-function;
 
-.modal-form__comment::placeholder {
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
-}
-.modal-form__comment:hover,
-.modal-form__comment:focus {
-  border-color: var(--brand-accent);
+  &::placeholder {
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $brand-accent;
+  }
 }
 
 .agreement {
@@ -112,7 +106,6 @@
 
 .agreement__checkbox {
   position: relative;
-  display: flex;
   text-align: center;
   display: block;
   justify-content: center;
@@ -126,36 +119,36 @@
 
 .agreement__icon-position {
   position: absolute;
-  top: 0;
+  top: 1px;
   left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-centered();
   width: 16px;
   height: 15px;
   fill: transparent;
-  border: 2px solid var(--title-color);
+  border: 2px solid $title-color;
   border-radius: 2px;
-  transition: border-color var(--timing-duration) var(--timing-function);
-}
-.agreement__accept:checked + .agreement__icon-position {
-  fill: var(--primary-white-color);
-  background-color: var(--brand-accent);
-  border-color: var(--brand-accent);
-}
-.agreement__icon-position:hover,
-.agreement__icon-position:focus {
-  border-color: var(--brand-accent);
+  transition: border-color $timing-duration $timing-function;
+
+  .agreement__accept:checked + & {
+    fill: $primary-white-color;
+    background-color: $brand-accent;
+    border-color: $brand-accent;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $brand-accent;
+  }
 }
 
 .agreement__link {
   margin-left: 5px;
-  color: var(--brand-accent);
+  color: $brand-accent;
   text-decoration: underline;
-  transition: color var(--timing-duration) var(--timing-function);
-}
+  transition: color $timing-duration $timing-function;
 
-.agreement__link:hover,
-.agreement__link:focus {
-  color: var(--btn-hover);
+  .agreement__link:hover,
+  .agreement__link:focus {
+    color: $btn-hover;
+  }
 }

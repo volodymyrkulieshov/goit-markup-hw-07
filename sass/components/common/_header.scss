@@ -1,18 +1,13 @@
 .header {
-  border-bottom: 1px solid var(--border-header);
+  border-bottom: 1px solid $border-header;
 }
 
 .header__nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-centered();
 }
 
 .nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+  @include flex-centered();
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -32,41 +27,39 @@
   padding-top: 32px;
   padding-bottom: 32px;
 
-  color: var(--title-color);
+  color: $title-color;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  transition: color var(--timing-duration) var(--timing-function);
-}
+  transition: color $timing-duration $timing-function;
 
-.nav__list .nav__link:hover,
-.nav__list .nav__link:focus {
-  color: var(--brand-accent);
+  &:hover,
+  &:focus {
+    color: $brand-accent;
+  }
 }
 
 .nav__link--current {
   position: relative;
-  color: var(--brand-accent);
-}
+  color: $brand-accent;
 
-.nav__link--current:after {
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  content: '';
-  display: block;
-  width: 100%;
-  height: 4px;
-  background: var(--brand-accent);
-  border-radius: 2px;
+  &:after {
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: $brand-accent;
+    border-radius: 2px;
+  }
 }
 
 /* -------------------header-contacts---------------------- */
 
 .contacts {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-centered();
   padding-top: 32px;
   padding-bottom: 32px;
   margin-left: auto;
@@ -82,25 +75,20 @@
 
 .contacts__tel,
 .contacts__mail {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-centered();
   width: 100%;
   height: 100%;
-  color: var(--basic-color);
-  transition: color var(--timing-duration) var(--timing-function);
+  color: $basic-color;
+  transition: color $timing-duration $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $brand-accent;
+  }
 }
 
 .contacts__icon,
 .contacts__icon {
   fill: currentColor;
   margin-right: 10px;
-}
-.contacts__mail:hover,
-.contacts__mail:focus {
-  color: var(--brand-accent);
-}
-.contacts__tel:hover,
-.contacts__tel:focus {
-  color: var(--brand-accent);
 }

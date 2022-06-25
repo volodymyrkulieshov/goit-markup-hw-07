@@ -1,12 +1,13 @@
 .benefits__list {
-  display: flex;
+  @include flex-centered();
 }
 
-.benefits__item:not(:first-child) {
-  margin-left: 30px;
-}
 .benefits__item {
   width: 270px;
+
+  &:not(:first-child) {
+    margin-left: 30px;
+  }
 }
 
 .benefits__icon--satelite::before {
@@ -62,7 +63,7 @@
 }
 
 .benefits__title {
-  color: var(--title-color);
+  color: $title-color;
 
   font-weight: 700;
   line-height: 1.14;
