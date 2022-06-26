@@ -10,10 +10,12 @@
 
   @include flex-centered();
   background-color: transparent;
+  cursor: pointer;
   transition: fill $timing-duration $timing-function;
-}
-.modal-btn:hover {
-  fill: $brand-accent;
+
+  &:hover {
+    fill: $brand-accent;
+  }
 }
 // --------------BTN-SUBMIT-----------------
 .modal-form__submit {
@@ -35,9 +37,4 @@
   border: none;
   outline: none;
   transition: background-color $timing-duration $timing-function;
-
-  &:hover,
-  &:focus {
-    background-color: var(--btn-hover);
-  }
 }

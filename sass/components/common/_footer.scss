@@ -150,6 +150,7 @@
   background-color: $brand-accent;
   border-radius: 4px;
   border: none;
+  cursor: pointer;
   transition: background-color $timing-duration $timing-function;
 
   &:hover,

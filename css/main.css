@@ -404,6 +404,7 @@ img {
   background-color: #2196f3;
   border-radius: 4px;
   border: none;
+  cursor: pointer;
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -537,6 +538,7 @@ img {
 
 .benefits__title {
   color: #212121;
+  font-size: 14px;
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
@@ -819,10 +821,10 @@ img {
       -ms-flex-align: center;
           align-items: center;
   background-color: transparent;
+  cursor: pointer;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .modal-btn:hover {
   fill: #2196f3;
 }
@@ -852,9 +854,6 @@ img {
   outline: none;
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.modal-form__submit:hover, .modal-form__submit:focus {
-  background-color: var(--btn-hover);
 }
 
 .modal__title {
@@ -1077,6 +1076,7 @@ img {
   padding: 6px 22px;
   border-radius: 4px;
   border: none;
+  cursor: pointer;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
